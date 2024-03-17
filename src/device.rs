@@ -8,7 +8,10 @@ use hal::digital::v2::OutputPin;
 use Register;
 
 /// MPU's I2C address (AD0 low)
+#[cfg(not(feature = "i2c_ad0"))]
 const MPU_I2C_ADDR: u8 = 0x68;
+#[cfg(feature = "i2c_ad0")]
+const MPU_I2C_ADDR: u8 = 0x69;
 
 /// Releasable describes a type that can be destroyed
 /// with a released asset.

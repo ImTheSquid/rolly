@@ -22,3 +22,5 @@ linux-embedded-hal = "0.3"
 i2c = []
 # Enable the use of the internal DMP features
 dmp = ["libm"]
+# Sets I2C AD0 flag to HIGH (default is LOW)
+i2c_ad0 = []
